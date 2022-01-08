@@ -1,0 +1,36 @@
+@import '../../styles/scss--variables.scss';
+
+.header {
+  background-color: transparent;
+  
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > :first-child {
+      display: flex;
+      align-items: center;
+
+      .header__nav ul {
+        list-style: none;
+        margin-left: 20px;
+        display: flex;
+        gap: 30px;
+
+        a {
+          font-size: $t6_font-size;
+          font-weight: $t6_font-weight;
+          line-height: $t6_line-height;
+          color: $darkgray_text;
+        }
+      }
+    }
+
+    .header__user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

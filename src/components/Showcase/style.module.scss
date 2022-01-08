@@ -1,0 +1,23 @@
+@import '../../styles/scss--variables.scss';
+
+.showcase {
+  & > h1 {
+    font-size: $t1_font-size;
+    font-weight: $t1_font-weight;
+    line-height: $t1_line-height;
+    color: $darkgray_text;
+    margin: 88px auto 26px;
+    border-top: 4px solid $lightgray_text;
+    width: fit-content;
+
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+
+  & > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
