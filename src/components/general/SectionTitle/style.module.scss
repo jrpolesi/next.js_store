@@ -1,0 +1,15 @@
+@import "../../../styles/scss--variables.scss";
+
+.section__title {
+  font-size: $t1_font-size;
+  font-weight: $t1_font-weight;
+  line-height: $t1_line-height;
+  color: $darkgray_text;
+  margin: 0px auto 26px;
+  border-top: 4px solid $border_color;
+  width: fit-content;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

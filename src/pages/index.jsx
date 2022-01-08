@@ -20,11 +20,10 @@ export default function Home(props) {
 
       <Header />
       <HomePicture />
-      <div className='container'>
-        <Showcase title={'New Products'} data={props.data.mainProducts} />
-        <Showcase title={props.data.randomCategory.category} data={props.data.randomCategory.data} />
-        <BlogShowcase />
-      </div>
+
+      <Showcase title={'New Products'} data={props.data.mainProducts} backgroundColor="white" />
+      <Showcase title={props.data.randomCategory.category} data={props.data.randomCategory.data} backgroundColor="#ECECEC" />
+      <BlogShowcase backgroundColor="white" />
     </>
   )
 }

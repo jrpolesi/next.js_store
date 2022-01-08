@@ -1,21 +1,8 @@
-@import '../../styles/scss--variables.scss';
+@import "../../styles/scss--variables.scss";
 
 .showcase {
-  & > h1 {
-    font-size: $t1_font-size;
-    font-weight: $t1_font-weight;
-    line-height: $t1_line-height;
-    color: $darkgray_text;
-    margin: 88px auto 26px;
-    border-top: 4px solid $border_color;
-    width: fit-content;
-
-    &::first-letter{
-      text-transform: uppercase;
-    }
-  }
-
-  & > div {
+  padding: 80px 10px 80px;
+  & > div > div {
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
     justify-content: center;

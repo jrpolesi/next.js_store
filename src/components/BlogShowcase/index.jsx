@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { SectionTitle } from '../general/SectionTitle'
 import { Card } from './Card'
 import styles from './style.module.scss'
 
-export function BlogShowcase() {
+export function BlogShowcase(props) {
   const [posts, setPosts] = useState([])
 
   useState(() => {
@@ -20,14 +21,20 @@ export function BlogShowcase() {
       key={post.id}
       data={{
         title: post.title,
-        subtitle: post.subtitle
+        subtitle: post.subtitle,
+        image: post.image
       }}
     />
   ))
 
   return (
-    <section className={styles.showcase}>
-      {posts && cards}
+    <section className={styles.showcase} style={{backgroundColor: `${props.backgroundColor}`}}>
+      <div className='container'>
+        <SectionTitle>Our Blog</SectionTitle>
+        <div>
+          {posts && cards}
+        </div>
+      </div>
     </section>
   )
 }

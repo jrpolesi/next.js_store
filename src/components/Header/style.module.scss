@@ -1,8 +1,9 @@
-@import '../../styles/scss--variables.scss';
+@import "../../styles/scss--variables.scss";
 
 .header {
   background-color: transparent;
-  
+  padding: 0 25px;
+
   & > div {
     display: flex;
     align-items: center;
@@ -11,6 +12,10 @@
     > :first-child {
       display: flex;
       align-items: center;
+
+      > figure{
+        margin: 0;
+      }
 
       .header__nav ul {
         list-style: none;
@@ -23,6 +28,9 @@
           font-weight: $t6_font-weight;
           line-height: $t6_line-height;
           color: $darkgray_text;
+        }
+        @media screen and (max-width: 1150px) {
+          display: none;
         }
       }
     }

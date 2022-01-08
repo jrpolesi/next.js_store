@@ -1,6 +1,18 @@
-.showcase{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 35px;
+.showcase {
+  padding: 80px 10px 80px;
+
+  & > div > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: auto;
+    max-width: 1150px;
+
+    @media screen and (max-width: 1250px) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 0 10px 10px;
+    }
+  }
 }
