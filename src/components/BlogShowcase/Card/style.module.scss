@@ -1,0 +1,28 @@
+@import "../../../styles/scss--variables.scss";
+
+.card:nth-child(1),
+.card:nth-child(2) {
+  flex-basis: 48%;
+}
+
+.card {
+  flex-basis: 30%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 4px solid gray;
+
+  .card__image {
+    width: 100%;
+  }
+
+  .card__title {
+    font-size: $t4_font-size;
+    font-weight: $t4_font-weight;
+    line-height: $t4_line-height;
+  }
+  .card__subtitle {
+    font-size: $t6_font-size;
+    font-weight: $t6_font-weight;
+    line-height: $t6_line-height;
+  }
+}

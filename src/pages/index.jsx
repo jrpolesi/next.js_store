@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Banner } from '../components/Banner'
+import { BlogShowcase } from '../components/BlogShowcase'
 import { Header } from '../components/Header'
 import { HomePicture } from '../components/HomePicture'
 import { Showcase } from '../components/Showcase'
@@ -21,10 +21,9 @@ export default function Home(props) {
       <Header />
       <HomePicture />
       <div className='container'>
-        <Banner />
         <Showcase title={'New Products'} data={props.data.mainProducts} />
         <Showcase title={props.data.randomCategory.category} data={props.data.randomCategory.data} />
-
+        <BlogShowcase />
       </div>
     </>
   )
@@ -42,6 +41,7 @@ export async function getServerSideProps(context) {
     const res = await fetch('https://fakestoreapi.com/products/categories')
     const data = await res.json()
     const categories = data
+    data.splice(data.indexOf('men\'s clothing'), 1)
 
     const randomIndex = Math.floor(Math.random() * categories.length)
 
