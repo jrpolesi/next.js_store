@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { BlogShowcase } from '../components/BlogShowcase'
+import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { HomePicture } from '../components/HomePicture'
 import { Showcase } from '../components/Showcase'
@@ -21,9 +22,11 @@ export default function Home(props) {
       <Header />
       <HomePicture />
 
-      <Showcase title={'New Products'} data={props.data.mainProducts} backgroundColor="white" />
+      <Showcase title={'new products'} data={props.data.mainProducts} backgroundColor="white" />
       <Showcase title={props.data.randomCategory.category} data={props.data.randomCategory.data} backgroundColor="#ECECEC" />
       <BlogShowcase backgroundColor="white" />
+
+      <Footer />
     </>
   )
 }
