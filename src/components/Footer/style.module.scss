@@ -1,0 +1,33 @@
+@import '../../styles/scss--variables.scss';
+
+
+
+.footer{
+  background-color: $color__darkgray;
+  padding: 20px 15px 15px;
+
+  .footer__nav{
+    color: $white_text;
+
+    h4{
+      margin: 0;
+    }
+
+    ul{
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+
+      li{
+        line-height: $body_line-height;
+      }
+    }
+  }
+}
+
+.footer__bottom{
+  padding: 8px 15px 10px;
+  background-color: $color_dark;
+  color: $white_text;
+  text-align: center;
+}
