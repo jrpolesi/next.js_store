@@ -1,22 +1,41 @@
 @import "../../../styles/scss--variables.scss";
 
+.card:nth-of-type(odd){
+  background-color: $color_dark;
+  .card__title {
+    color: $lightgray_text;
+  }
+  .card__subtitle {
+    color: $mediumgray_text;
+  }
+}
+
+.card:nth-of-type(even){
+  background-color: $color_lightgray;
+  .card__title {
+    color: $dark_text;
+  }
+  .card__subtitle {
+    color: $gray_text;
+  }
+}
+
 .card:nth-child(1),
 .card:nth-child(2) {
   flex-basis: 550px;
-  height: 600px;
+  height: 500px;
   @media screen and (max-width: 1250px) {
     flex-basis: 300px;
     flex-shrink: 0;
-    height: 500px;
+    height: 420px;
   }
 }
 
 .card {
   flex-basis: 31%;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
   border-radius: 10px;
-  background-color: $darkgray_text;
 
   .card__image {
     width: 100%;
@@ -24,20 +43,39 @@
     object-fit: cover;
   }
 
-  .card__title {
-    font-size: $t4_font-size;
-    font-weight: $t4_font-weight;
-    line-height: $t4_line-height;
-  }
-  .card__subtitle {
-    font-size: $t6_font-size;
-    font-weight: $t6_font-weight;
-    line-height: $t6_line-height;
+  > div {
+    padding: 25px;
+
+    .card__title {
+      margin: 0;
+      overflow: hidden;
+      font-size: $t4_font-size;
+      font-weight: $t4_font-weight;
+      line-height: $t4_line-height;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-height: 57.6px;
+    }
+    .card__subtitle {
+      margin: 6px 0 0;
+      overflow: hidden;
+      font-size: $t6_font-size;
+      font-weight: $t6_font-weight;
+      line-height: $t6_line-height;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-height: 46.8px;
+    }
+    @media screen and (max-width: 1250px){
+      padding: 15px;
+    }
   }
 
   @media screen and (max-width: 1250px) {
     flex-basis: 300px;
     flex-shrink: 0;
-    height: 500px;
+    height: 420px;
   }
 }

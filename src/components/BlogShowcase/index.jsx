@@ -30,7 +30,7 @@ export function BlogShowcase(props) {
   return (
     <section className={styles.showcase} style={{backgroundColor: `${props.backgroundColor}`}}>
       <div className='container'>
-        <SectionTitle>Our Blog</SectionTitle>
+        <SectionTitle>our blog</SectionTitle>
         <div>
           {posts && cards}
         </div>
