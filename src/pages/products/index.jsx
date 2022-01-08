@@ -1,6 +1,6 @@
 
 export default function Products(){
   return (
-    <h1>Produtos aqui</h1>
+    <h1>todos produtos aqui</h1>
   )
 }
