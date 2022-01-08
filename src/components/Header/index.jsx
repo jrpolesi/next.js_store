@@ -49,12 +49,12 @@ export function Header() {
               </Link>
               <Link href='/products'>
                 <a>
-                  <li>men's clothing</li>
+                  <li>men&apos;s clothing</li>
                 </a>
               </Link>
               <Link href='/products'>
                 <a>
-                  <li>women's clothing</li>
+                  <li>women&apos;s clothing</li>
                 </a>
               </Link>
             </ul>
@@ -91,12 +91,12 @@ export function Header() {
               </Link>
               <Link href='/products'>
                 <a>
-                  <li>men's clothing</li>
+                  <li>men&apos;s clothing</li>
                 </a>
               </Link>
               <Link href='/products'>
                 <a>
-                  <li>women's clothing</li>
+                  <li>women&apos;s clothing</li>
                 </a>
               </Link>
             </ul>
