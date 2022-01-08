@@ -13,7 +13,7 @@
       display: flex;
       align-items: center;
 
-      > figure{
+      > figure {
         margin: 0;
       }
 
@@ -33,12 +33,68 @@
           display: none;
         }
       }
+      .header__nav__sandwich {
+        display: none;
+        background-color: $color_white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 90vw;
+        max-width: 500px;
+        height: 100vh;
+        z-index: 1;
+        padding: 0 0 0 30px;
+        box-shadow: 0 5px 32px rgb(00, 00, 00, 0.5);
+
+        .header__closeMenu {
+          margin-left: auto;
+          width: fit-content;
+          padding: 15px;
+        }
+
+        .header__logo {
+          font-size: $t3_font-size;
+          font-weight: $t3_font-weight;
+          margin: 0;
+
+          h1{
+            margin: 0;
+            color: $dark_text;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          list-style: none;
+          padding: 0;
+
+          li {
+            font-size: $t4_font-size;
+            font-weight: $t4_font-weight;
+            color: $darkgray_text;
+          }
+        }
+
+        @media screen and (min-width: 1150px) {
+          display: none !important;
+        }
+      }
     }
 
     .header__user {
       display: flex;
       align-items: center;
       gap: 10px;
+
+      .header__menuSandwich {
+        display: none;
+        @media screen and (max-width: 1150px) {
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }
