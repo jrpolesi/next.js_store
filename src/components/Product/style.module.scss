@@ -16,6 +16,27 @@
     img {
       width: 100%;
     }
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  .product__imageWraper__mobile{
+    display: none;
+    text-align: center;
+    height: 300px;
+    flex-shrink: 0;
+    padding: 20px;
+    z-index: -1;
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+      display: block;
+    }
   }
 
   .product__info {
@@ -34,6 +55,7 @@
         font-size: $body_font-size;
         font-weight: $thin_font-weight;
         width: max-content;
+        margin-left: 10px;
       }
     }
 
@@ -67,6 +89,22 @@
       font-weight: $body_font-weight;
       line-height: $body_line-height;
       cursor: pointer;
+    }
+
+
+    .product__stars{
+      display: flex;
+      align-items: center;
+
+      .product__semistar{
+        transform: rotateY(180deg);
+      }
+
+      span{
+        color: $darkblue_text;
+        font-size: $little_font-size;
+        font-weight: $thin_font-weight;
+      }
     }
   }
 }
