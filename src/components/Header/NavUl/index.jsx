@@ -5,7 +5,6 @@ import Image from 'next/image'
 import closeIcon from '../../../assets/images/close-icon.svg'
 
 export function NavUl(props) {
-  console.log(props.isMobile)
   return (
     <>
       {props.isMobile &&
