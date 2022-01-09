@@ -22,3 +22,14 @@ body {
     margin: auto;
   }
 }
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 169px;
+}
