@@ -16,7 +16,7 @@ export function BlogShowcase(props) {
     getPosts()
   }, [])
 
-  const cards = posts.map((post) => (
+  const cards = posts.map((post) => ( 
     <Card
       key={post.id}
       data={{
