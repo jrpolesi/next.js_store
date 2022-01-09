@@ -27,32 +27,32 @@ export function Header() {
           </figure>
           <nav className={styles.header__nav}>
             <ul>
-              <Link href='/'>
+              <Link href="/">
                 <a>
                   <li>Home</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products">
                 <a>
                   <li>All products</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/electronics">
                 <a>
                   <li>Eletronics</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/jewelery">
                 <a>
                   <li>jewelery</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/men's clothing">
                 <a>
                   <li>men&apos;s clothing</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/women's clothing">
                 <a>
                   <li>women&apos;s clothing</li>
                 </a>
@@ -69,32 +69,32 @@ export function Header() {
               <figcaption>Nome da loja</figcaption>
             </figure>
             <ul>
-              <Link href='/'>
+              <Link href="/">
                 <a>
                   <li>Home</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products">
                 <a>
                   <li>All products</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/electronics">
                 <a>
                   <li>Eletronics</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/jewelery">
                 <a>
                   <li>jewelery</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/men's clothing">
                 <a>
                   <li>men&apos;s clothing</li>
                 </a>
               </Link>
-              <Link href='/products'>
+              <Link href="/products/categories/women's clothing">
                 <a>
                   <li>women&apos;s clothing</li>
                 </a>
