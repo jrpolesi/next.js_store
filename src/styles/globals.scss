@@ -16,20 +16,26 @@ body {
   figcaption {
     display: none;
   }
-
-  .container{
-    max-width: 1400px;
-    margin: auto;
-  }
 }
 
 body {
   position: relative;
   min-height: 100vh;
+  
+  .header__container {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 
 body::after {
-  content: '';
+  content: "";
   display: block;
   height: 169px;
 }
