@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
+import { NavUl } from './NavUl'
 
 import userIcon from '../../assets/images/user-icon.svg'
 import cartIcon from '../../assets/images/cart-icon.svg'
 import menuIcon from '../../assets/images/menu-icon.svg'
-import closeIcon from '../../assets/images/close-icon.svg'
 
 export function Header() {
   const [showMenu, setShowMenu] = useState('none')
@@ -26,80 +26,16 @@ export function Header() {
             <figcaption>Nome da loja</figcaption>
           </figure>
           <nav className={styles.header__nav}>
-            <ul>
-              <Link href="/">
-                <a>
-                  <li>Home</li>
-                </a>
-              </Link>
-              <Link href="/products">
-                <a>
-                  <li>All products</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/electronics">
-                <a>
-                  <li>Eletronics</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/jewelery">
-                <a>
-                  <li>jewelery</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/men's clothing">
-                <a>
-                  <li>men&apos;s clothing</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/women's clothing">
-                <a>
-                  <li>women&apos;s clothing</li>
-                </a>
-              </Link>
-            </ul>
+            <NavUl
+              showMenu={showMenu}
+              handleMenuSandwichClick={handleMenuSandwichClick}
+            />
           </nav>
-          <nav className={styles.header__nav__sandwich} style={{ display: `${showMenu}` }}>
-            <div className={styles.header__closeMenu} onClick={handleMenuSandwichClick}>
-              <Image src={closeIcon} alt="menu" />
-            </div>
-            <figure className={styles.header__logo}>
-              {/* <img src="" alt="" /> */}
-              <h1>Logo aqui</h1>
-              <figcaption>Nome da loja</figcaption>
-            </figure>
-            <ul>
-              <Link href="/">
-                <a>
-                  <li>Home</li>
-                </a>
-              </Link>
-              <Link href="/products">
-                <a>
-                  <li>All products</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/electronics">
-                <a>
-                  <li>Eletronics</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/jewelery">
-                <a>
-                  <li>jewelery</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/men's clothing">
-                <a>
-                  <li>men&apos;s clothing</li>
-                </a>
-              </Link>
-              <Link href="/products/categories/women's clothing">
-                <a>
-                  <li>women&apos;s clothing</li>
-                </a>
-              </Link>
-            </ul>
+          <nav className={styles.header__nav__mobile} style={{ display: `${showMenu}` }}>
+            <NavUl
+              isMobile={true}
+              handleMenuSandwichClick={handleMenuSandwichClick}
+            />
           </nav>
         </div>
         <div className={styles.header__user}>

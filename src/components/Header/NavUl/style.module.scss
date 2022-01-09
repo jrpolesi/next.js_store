@@ -1,0 +1,50 @@
+@import "../../../styles/scss--variables.scss";
+
+.nav__logoAndClose {
+  .header__closeMenu {
+    margin-left: auto;
+    width: fit-content;
+    padding: 15px;
+  }
+
+  .header__logo {
+    font-size: $t3_font-size;
+    font-weight: $t3_font-weight;
+    margin: 0;
+
+    h1 {
+      margin: 0;
+      color: $dark_text;
+    }
+  }
+}
+.nav__ul__mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: $t4_font-size;
+    font-weight: $t4_font-weight;
+    color: $darkgray_text;
+  }
+}
+
+.nav__ul {
+  list-style: none;
+  margin-left: 20px;
+  display: flex;
+  gap: 30px;
+
+  a {
+    font-size: $t6_font-size;
+    font-weight: $t6_font-weight;
+    line-height: $t6_line-height;
+    color: $darkgray_text;
+  }
+  @media screen and (max-width: 1150px) {
+    display: none;
+  }
+}
