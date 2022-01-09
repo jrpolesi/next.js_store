@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styles from './style.module.scss'
 import Image from 'next/image'
+import { CartContext } from '../../Contexts/CartContext'
 
 import starIcon from '../../assets/images/star-icon.svg'
 import semiStarIcon from '../../assets/images/semistar-icon.svg'
 
 export function Product({ product, ...rest }) {
+  const { products, setProducts, addToCart } = useContext(CartContext)
   const [stars, setStars] = useState(null)
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export function Product({ product, ...rest }) {
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <div className={styles.star}>
+        <div className={styles.star} key={i}>
           <Image src={starIcon} alt='star' />
         </div>
       )
@@ -23,14 +25,33 @@ export function Product({ product, ...rest }) {
 
     if (hasRest) {
       stars.push(
-        <div className={styles.product__semistar}>
+        <div className={styles.product__semistar} key={stars.length}>
           <Image src={semiStarIcon} alt='star' />
         </div>
       )
     }
 
     setStars(stars)
-  }, [])
+  }, [product.rating.rate])
+
+  function handleAddToCart() {
+
+    
+
+    const newItem = {
+      id: product.id,
+      price: product.price,
+      title: product.title,
+      image: product.image,
+      quantity: 1
+    }
+
+    setProducts((oldCart) => {
+      const updatedProducts = addToCart(oldCart, newItem)
+
+      return updatedProducts
+    })
+  }
 
   return (
     <div className='container'>
@@ -58,7 +79,12 @@ export function Product({ product, ...rest }) {
 
           <span className={styles.product__price}>U$ {product.price.toFixed(2)}</span>
 
-          <button className={styles.product__button}>Add to cart</button>
+          <button
+            className={styles.product__button}
+            onClick={handleAddToCart}
+          >
+            Add to cart
+          </button>
 
           <div className={styles.product__stars}>
             {stars}

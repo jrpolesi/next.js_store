@@ -1,14 +1,17 @@
 import { CustomHead } from "../../components/CustomHead"
+import { CartProvider } from "../../Contexts/CartContext"
 import { Header } from "../../components/Header"
-import { Footer } from "../../components/Footer"
 import { Showcase } from "../../components/Showcase"
+import { Footer } from "../../components/Footer"
 
 export default function Category(props) {
   return (
     <>
       <CustomHead title="Next.js store" />
-      <Header />
-      <Showcase data={props.products} addClass="noLargePadding"/>
+      <CartProvider>
+        <Header />
+      </CartProvider>
+      <Showcase data={props.products} addClass="noLargePadding" />
       <Footer />
     </>
   )

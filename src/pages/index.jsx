@@ -1,17 +1,20 @@
 import styles from '../styles/Home.module.scss'
 import { CustomHead } from '../components/CustomHead'
-import { Footer } from '../components/Footer'
+import { CartProvider } from '../Contexts/CartContext'
 import { Header } from '../components/Header'
 import { HomePicture } from '../components/HomePicture'
 import { Showcase } from '../components/Showcase'
 import { BlogShowcase } from '../components/BlogShowcase'
+import { Footer } from '../components/Footer'
 
 export default function Home(props) {
   return (
     <>
       <CustomHead title="Next.js store" />
 
-      <Header isTransparent={true}/>
+      <CartProvider>
+        <Header isTransparent={true} />
+      </CartProvider>
       <HomePicture />
 
       <Showcase title={'new products'} data={props.data.mainProducts} />

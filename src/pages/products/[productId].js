@@ -1,16 +1,17 @@
 import { CustomHead } from "../../components/CustomHead"
+import { CartProvider } from "../../Contexts/CartContext"
 import { Header } from "../../components/Header"
-import { Card } from "../../components/Showcase/Card"
-import { Footer } from "../../components/Footer"
-import Image from "next/image"
 import { Product } from "../../components/Product"
+import { Footer } from "../../components/Footer"
 
 export default function Category({ product, ...rest }) {
   return (
     <>
       <CustomHead title="Next.js store" />
-      <Header />
-      <Product product={product}/>
+      <CartProvider>
+        <Header />
+        <Product product={product}/>
+      </CartProvider>
       <Footer />
     </>
   )

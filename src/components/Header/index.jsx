@@ -7,6 +7,7 @@ import { NavUl } from './NavUl'
 import userIcon from '../../assets/images/user-icon.svg'
 import cartIcon from '../../assets/images/cart-icon.svg'
 import menuIcon from '../../assets/images/menu-icon.svg'
+import { Cart } from '../Cart'
 
 export function Header(props) {
   const [showMenu, setShowMenu] = useState('none')
@@ -39,6 +40,7 @@ export function Header(props) {
           </nav>
         </div>
         <div className={styles.header__user}>
+          <Cart />
           <Image src={cartIcon} alt="cart" />
           <Image src={userIcon} alt="login" />
           <div className={styles.header__menuSandwich} onClick={handleMenuSandwichClick}>
