@@ -8,7 +8,7 @@ export default function Category(props) {
     <>
       <CustomHead title="Next.js store" />
       <Header />
-      <Showcase title={'all products'} data={props.products} />
+      <Showcase data={props.products} addClass="noLargePadding"/>
       <Footer />
     </>
   )
