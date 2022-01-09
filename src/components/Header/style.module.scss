@@ -3,6 +3,8 @@
 .header {
   background-color: transparent;
   padding: 0 25px;
+  box-shadow: 0 2px 5px rgb(00, 00, 00, .5);
+  z-index: 100;
 
   & > div {
     display: flex;

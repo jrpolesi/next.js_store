@@ -1,3 +1,4 @@
+import { CustomHead } from "../../components/CustomHead"
 import { Header } from "../../components/Header"
 import { Card } from "../../components/Showcase/Card"
 import { Footer } from "../../components/Footer"
@@ -7,6 +8,7 @@ export default function Category(props) {
 
   return (
     <>
+      <CustomHead title="Next.js store" />
       <Header />
       <Card data={props.product} />
       <Footer />

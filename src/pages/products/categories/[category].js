@@ -1,15 +1,17 @@
 import { Showcase } from "../../../components/Showcase"
 import { Header } from "../../../components/Header"
 import { Footer } from "../../../components/Footer"
+import { CustomHead } from "../../../components/CustomHead"
 
 export default function Category(props) {
 
-  
+
   return (
     <>
-    <Header />
-    <Showcase title={null} data={props.products} backgroundColor="#FFFFFF"/>
-    <Footer />
+      <CustomHead title="Next.js store" />
+      <Header />
+      <Showcase title={null} data={props.products} />
+      <Footer />
     </>
   )
 }

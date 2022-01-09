@@ -1,4 +1,4 @@
-
+import { CustomHead } from "../../components/CustomHead"
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 import { Showcase } from "../../components/Showcase"
@@ -6,8 +6,9 @@ import { Showcase } from "../../components/Showcase"
 export default function Category(props) {
   return (
     <>
+      <CustomHead title="Next.js store" />
       <Header />
-      <Showcase title={null} data={props.products} backgroundColor="#FFFFFF" />
+      <Showcase title={'all products'} data={props.products} />
       <Footer />
     </>
   )

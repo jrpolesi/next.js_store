@@ -8,7 +8,7 @@ import userIcon from '../../assets/images/user-icon.svg'
 import cartIcon from '../../assets/images/cart-icon.svg'
 import menuIcon from '../../assets/images/menu-icon.svg'
 
-export function Header() {
+export function Header(props) {
   const [showMenu, setShowMenu] = useState('none')
 
   function handleMenuSandwichClick() {
@@ -17,7 +17,7 @@ export function Header() {
 
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={{backgroundColor: `${props.isTransparent && 'transparent'}`}}>
       <div className='container'>
         <div>
           <figure className='header__logo'>
