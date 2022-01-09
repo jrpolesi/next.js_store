@@ -8,7 +8,7 @@ export function BlogShowcase(props) {
 
   useState(() => {
     async function getPosts() {
-      const res = await fetch('/api/blog/posts', { method: 'GET' })
+      const res = await fetch('https://next-js-store-4iha8en6m-jrpolesi.vercel.app/api/blog/posts', { method: 'GET' })
       const data = await res.json()
       setPosts(data)
     }
