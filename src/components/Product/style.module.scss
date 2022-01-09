@@ -69,6 +69,7 @@
     .product__description{
       margin: 0;
       color: $dark_text;
+      font-size: $body_font-size;
       font-weight: $thin_font-weight;
     }
 
@@ -101,10 +102,15 @@
       }
 
       span{
+        margin-left: 8px;
         color: $darkblue_text;
         font-size: $little_font-size;
         font-weight: $thin_font-weight;
       }
     }
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-top: 30px;
   }
 }

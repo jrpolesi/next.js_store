@@ -18,17 +18,28 @@
     }
   }
 }
+
 .nav__ul__mobile {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   list-style: none;
   padding: 0;
 
-  li {
-    font-size: $t4_font-size;
-    font-weight: $t4_font-weight;
-    color: $darkgray_text;
+  a {
+
+    &:hover li{
+      color: $dark_text;
+      border-bottom: 4px solid $color_lightgray;
+    }
+    
+    li {
+      padding: 10px;
+      width: fit-content;
+      font-size: $t4_font-size;
+      font-weight: $t4_font-weight;
+      color: $darkgray_text;
+      border-bottom: 4px solid transparent;
+    }
   }
 }
 
@@ -43,6 +54,10 @@
     font-weight: $t6_font-weight;
     line-height: $t6_line-height;
     color: $darkgray_text;
+
+    :hover {
+      color: $dark_text;
+    }
   }
   @media screen and (max-width: 1150px) {
     display: none;
