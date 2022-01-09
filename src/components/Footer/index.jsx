@@ -1,4 +1,5 @@
 import styles from './style.module.scss'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -10,7 +11,11 @@ export function Footer() {
             <ul>
               <li>Contact Us</li>
               <li>FAQ</li>
-              <li>Products</li>
+              <Link href="/products">
+                <a>
+                  <li>Products</li>
+                </a>
+              </Link>
             </ul>
           </nav>
         </div>
