@@ -43,6 +43,10 @@
       align-items: center;
       gap: 6px;
 
+      &:hover .cart__state{
+        display: block;
+      }
+
       .header__menuSandwich {
         display: none;
         @media screen and (max-width: 1150px) {

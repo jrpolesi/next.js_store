@@ -19,7 +19,7 @@ export function Header(props) {
 
   return (
     <header className={styles.header} style={{backgroundColor: `${props.isTransparent && 'transparent'}`}}>
-      <div className='container'>
+      <div className='header__container'>
         <div>
           <figure className='header__logo'>
             {/* <img src="" alt="" /> */}
@@ -40,7 +40,7 @@ export function Header(props) {
           </nav>
         </div>
         <div className={styles.header__user}>
-          <Cart />
+          <Cart className={styles.cart__state}/>
           <Image src={cartIcon} alt="cart" />
           <Image src={userIcon} alt="login" />
           <div className={styles.header__menuSandwich} onClick={handleMenuSandwichClick}>

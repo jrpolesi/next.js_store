@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useContext } from 'react'
 import { CartContext } from '../../Contexts/CartContext'
 
-export function Cart() {
+export function Cart(props) {
   const { products, setProducts } = useContext(CartContext)
 
   function handleDelete(){
@@ -25,7 +25,7 @@ export function Cart() {
 
   const totalPrice = products.reduce((acc, {price, quantity}) => acc + (price * quantity), 0)
   return (
-    <section suppressHydrationWarning={true} className={styles.cart}>
+    <section suppressHydrationWarning={true} className={`${styles.cart} ${props.className}`}>
       <div className={styles.cart__content}>
         <h2 className={styles.cart__title}>Meu carriho</h2>
         {cartItems.length > 0 ?
