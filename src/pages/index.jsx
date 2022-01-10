@@ -34,6 +34,12 @@ export default function Home(props) {
 // ** é necessario retornar um objeto com uma propriedade chamada props (return {props: { }})
 // ** Só podemos utilizar essa function dentro dos componentes da pasta pages (não podemos utilizar em non-pages files/components)
 export async function getServerSideProps(context) {
+
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=100, stale-while-revalidate=159'
+  )
+
   async function getRandomCategory() {
     const res = await fetch('https://fakestoreapi.com/products/categories')
     const data = await res.json()
