@@ -23,8 +23,8 @@ export function Header(props) {
         <div>
           <figure className='header__logo'>
             {/* <img src="" alt="" /> */}
-            <h1>Logo aqui</h1>
-            <figcaption>Nome da loja</figcaption>
+            <h1>Next</h1>
+            <figcaption>Next Store</figcaption>
           </figure>
           <nav className={styles.header__nav}>
             <NavUl
