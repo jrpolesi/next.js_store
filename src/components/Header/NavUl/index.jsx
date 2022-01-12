@@ -37,17 +37,17 @@ export function NavUl(props) {
         </Link>
         <Link href="/products/categories/jewelery">
           <a>
-            <li>jewelery</li>
+            <li>Jewelery</li>
           </a>
         </Link>
         <Link href="/products/categories/men's clothing">
           <a>
-            <li>men&apos;s clothing</li>
+            <li>Men&apos;s clothing</li>
           </a>
         </Link>
         <Link href="/products/categories/women's clothing">
           <a>
-            <li>women&apos;s clothing</li>
+            <li>Women&apos;s clothing</li>
           </a>
         </Link>
       </ul>
